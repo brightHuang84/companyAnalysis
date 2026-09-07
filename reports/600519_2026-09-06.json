@@ -1,0 +1,593 @@
+{
+  "code": "600519",
+  "name": "贵州茅台",
+  "list_date": "2001-08-27",
+  "years_listed": 25.0,
+  "exchange": "SH",
+  "board": "主板",
+  "industry": null,
+  "as_of": "2026-09-06",
+  "window_years": 10,
+  "business": {
+    "股票代码": "600519",
+    "主营业务": "茅台酒及系列酒的生产与销售。",
+    "产品类型": "茅台酒、其他系列酒",
+    "产品名称": "茅台酒、其他系列酒",
+    "经营范围": "茅台酒及系列酒的生产与销售；饮料、食品、包装材料的生产、销售；防伪技术开发、信息产业相关产品的研制、开发；酒店经营管理、住宿、餐饮、娱乐、洗浴及停车场管理服务；车辆运输（不含危险化学品）、维修保养；第二类增值电信业务。"
+  },
+  "is_platform": false,
+  "credibility": {
+    "score": 65.5,
+    "band": "中高",
+    "weights": {
+      "business_model": 0.16,
+      "conduct": 0.24,
+      "board": 0.18,
+      "culture": 0.14,
+      "employees": 0.1,
+      "consumers": 0.1,
+      "users": 0.08
+    }
+  },
+  "sustainability": {
+    "score": 74.8,
+    "band": "中高",
+    "weights": {
+      "business_model": 0.26,
+      "conduct": 0.1,
+      "board": 0.14,
+      "culture": 0.1,
+      "employees": 0.14,
+      "consumers": 0.13,
+      "users": 0.13
+    },
+    "financial": {
+      "score": 90.0,
+      "band": "高",
+      "notes": [
+        {
+          "item": "资产负债率",
+          "detail": "22.76（风险低）",
+          "delta": 8
+        },
+        {
+          "item": "流动比率",
+          "detail": "3.89（偏强）",
+          "delta": 6
+        },
+        {
+          "item": "净资产收益率",
+          "detail": "30.77（偏强）",
+          "delta": 7
+        },
+        {
+          "item": "分红连续性",
+          "detail": "10 年有现金分红",
+          "delta": 6
+        },
+        {
+          "item": "净利润复合增速",
+          "detail": "19.4%",
+          "delta": 5
+        }
+      ]
+    }
+  },
+  "dimensions": {
+    "business_model": {
+      "id": "business_model",
+      "label": "经营模式",
+      "score": 90.0,
+      "raw_score": 90.0,
+      "band": "高",
+      "confidence": "高",
+      "evidence_n": 10,
+      "notes": [
+        {
+          "item": "毛利率稳定性",
+          "detail": "标准差 0.65，结构稳定",
+          "delta": 6.0
+        },
+        {
+          "item": "经营现金流/净利润",
+          "detail": "103.44（偏强）",
+          "delta": 9
+        },
+        {
+          "item": "非主营比重",
+          "detail": "-0.44（风险低）",
+          "delta": 6
+        },
+        {
+          "item": "主营利润比重",
+          "detail": "111.25（偏强）",
+          "delta": 5
+        },
+        {
+          "item": "收入复合增速",
+          "detail": "17.5%",
+          "delta": 6
+        }
+      ],
+      "flags": [],
+      "summary": "经营模式 90 分（高）。经营现金流/净利润 103.44（偏强）；毛利率稳定性 标准差 0.65，结构稳定。"
+    },
+    "conduct": {
+      "id": "conduct",
+      "label": "行为准则",
+      "score": 62.4,
+      "raw_score": 62.4,
+      "band": "中",
+      "confidence": "高",
+      "evidence_n": 11,
+      "notes": [
+        {
+          "item": "持续信息披露",
+          "detail": "窗口内公告 685 份",
+          "delta": 4
+        },
+        {
+          "item": "近三年无监管红旗",
+          "detail": "近三年标题未命中处罚/问询/立案",
+          "delta": 6
+        }
+      ],
+      "flags": [
+        {
+          "label": "监管问询",
+          "severity": "watch",
+          "count": 5,
+          "delta": -5.57,
+          "latest_date": "2020-12-24",
+          "latest_title": "关于贵州茅台酒股份有限公司的监管工作函"
+        }
+      ],
+      "summary": "行为准则 62 分（中）。近三年无监管红旗 近三年标题未命中处罚/问询/立案；持续信息披露 窗口内公告 685 份；公告信号：监管问询×5。"
+    },
+    "board": {
+      "id": "board",
+      "label": "董事会行为",
+      "score": 54.4,
+      "raw_score": 54.4,
+      "band": "中",
+      "confidence": "高",
+      "evidence_n": 17,
+      "notes": [
+        {
+          "item": "董监高持股变动",
+          "detail": "买 1 / 卖 1",
+          "delta": 0
+        },
+        {
+          "item": "控股集中度",
+          "detail": "第一大股东 54.4%",
+          "delta": 3
+        }
+      ],
+      "flags": [
+        {
+          "label": "内部人增持",
+          "severity": "green",
+          "count": 7,
+          "delta": 9.7,
+          "latest_date": "2025-12-30",
+          "latest_title": "贵州茅台:北京市环球律师事务所关于贵州茅台酒股份有限公司控股股东增持公司股份之法律意见书"
+        },
+        {
+          "label": "董事长变动",
+          "severity": "watch",
+          "count": 2,
+          "delta": -7.5,
+          "latest_date": "2025-10-28",
+          "latest_title": "贵州茅台:贵州茅台关于董事长辞职的公告"
+        },
+        {
+          "label": "独董辞职",
+          "severity": "watch",
+          "count": 3,
+          "delta": -5.8,
+          "latest_date": "2023-10-27",
+          "latest_title": "贵州茅台:贵州茅台关于独立董事辞职的公告"
+        },
+        {
+          "label": "董监高辞职",
+          "severity": "watch",
+          "count": 3,
+          "delta": -2.96,
+          "latest_date": "2023-08-21",
+          "latest_title": "贵州茅台:贵州茅台关于董事辞职的公告"
+        }
+      ],
+      "summary": "董事会行为 54 分（中）。控股集中度 第一大股东 54.4%；公告信号：内部人增持×7。"
+    },
+    "culture": {
+      "id": "culture",
+      "label": "管理文化",
+      "score": 65.0,
+      "raw_score": 65.0,
+      "band": "中高",
+      "confidence": "高",
+      "evidence_n": 11,
+      "notes": [
+        {
+          "item": "三项费用比重",
+          "detail": "10.31（风险低）",
+          "delta": 5
+        },
+        {
+          "item": "经营现金流/收入",
+          "detail": "52.35（偏强）",
+          "delta": 5
+        }
+      ],
+      "flags": [
+        {
+          "label": "更换审计机构",
+          "severity": "watch",
+          "count": 1,
+          "delta": -3.0,
+          "latest_date": "2024-04-03",
+          "latest_title": "贵州茅台:贵州茅台关于变更会计师事务所的公告"
+        }
+      ],
+      "summary": "管理文化 65 分（中高）。三项费用比重 10.31（风险低）；经营现金流/收入 52.35（偏强）；公告信号：更换审计机构×1。"
+    },
+    "employees": {
+      "id": "employees",
+      "label": "对待员工",
+      "score": 60.2,
+      "raw_score": 62.0,
+      "band": "中",
+      "confidence": "中",
+      "evidence_n": 3,
+      "notes": [
+        {
+          "item": "披露缺口",
+          "detail": "年报全文中的薪酬/社保/流失率尚未逐页解析，主要依赖公告标题与 ESG 社会分",
+          "delta": 0
+        },
+        {
+          "item": "华证 ESG 社会分",
+          "detail": "87.7",
+          "delta": 8
+        },
+        {
+          "item": "劳动相关公告",
+          "detail": "窗口内未命中裁员/仲裁/事故标题",
+          "delta": 0
+        }
+      ],
+      "flags": [],
+      "summary": "对待员工 60 分（中）。华证 ESG 社会分 87.7。"
+    },
+    "consumers": {
+      "id": "consumers",
+      "label": "对待消费者",
+      "score": 59.4,
+      "raw_score": 61.0,
+      "band": "中",
+      "confidence": "中",
+      "evidence_n": 3,
+      "notes": [
+        {
+          "item": "披露缺口",
+          "detail": "客诉率、返修率、广告处罚全文未入库，主要依赖召回/质量/虚假宣传类公告",
+          "delta": 0
+        },
+        {
+          "item": "无质量红旗",
+          "detail": "窗口内未命中召回/虚假宣传/重大质量标题",
+          "delta": 5
+        }
+      ],
+      "flags": [],
+      "summary": "对待消费者 59 分（中）。无质量红旗 窗口内未命中召回/虚假宣传/重大质量标题。"
+    },
+    "users": {
+      "id": "users",
+      "label": "对待用户",
+      "score": 51.1,
+      "raw_score": 52.0,
+      "band": "中",
+      "confidence": "低",
+      "evidence_n": 0,
+      "notes": [
+        {
+          "item": "企业类型",
+          "detail": "主营描述未显示平台/互联网用户模式，用户维度证据天然偏少，分数向中性收缩",
+          "delta": 0
+        }
+      ],
+      "flags": [],
+      "summary": "对待用户 51 分（中）。窗口内无显著加减分项。",
+      "not_applicable": true
+    }
+  },
+  "coverage": {
+    "annual_reports_proxy": 10,
+    "notices": 685,
+    "classified_flags": 21,
+    "esg": true,
+    "insider_rows": 2,
+    "limitations": [
+      "年报/半年报/ESG 报告 PDF 正文尚未逐句抽取，文化、员工、消费者、用户四维目前以公告标题 + 财务指标 + ESG 评分为主。",
+      "问询函正文、处罚决定书全文、客诉与诉讼细节需要监管函件与裁判文书库补齐。",
+      "分数是证据加权的研究框架，不是投资建议，也不能替代律师/审计尽调。"
+    ]
+  },
+  "shareholders": [
+    {
+      "名次": 1,
+      "股东名称": "中国贵州茅台酒厂(集团)有限责任公司",
+      "股份类型": "流通A股",
+      "持股数": 681282935,
+      "占总股本持股比例": 54.4,
+      "增减": "不变",
+      "变动比率": null
+    },
+    {
+      "名次": 2,
+      "股东名称": "贵州省国有资本运营有限责任公司",
+      "股份类型": "流通A股",
+      "持股数": 56996777,
+      "占总股本持股比例": 4.55,
+      "增减": "不变",
+      "变动比率": null
+    },
+    {
+      "名次": 3,
+      "股东名称": "香港中央结算有限公司",
+      "股份类型": "流通A股",
+      "持股数": 55048844,
+      "占总股本持股比例": 4.4,
+      "增减": "-4658524",
+      "变动比率": -7.80225985
+    },
+    {
+      "名次": 4,
+      "股东名称": "贵州茅台酒厂(集团)技术开发有限公司",
+      "股份类型": "流通A股",
+      "持股数": 27849688,
+      "占总股本持股比例": 2.22,
+      "增减": "不变",
+      "变动比率": null
+    },
+    {
+      "名次": 5,
+      "股东名称": "中国工商银行-上证50交易型开放式指数证券投资基金",
+      "股份类型": "流通A股",
+      "持股数": 11573000,
+      "占总股本持股比例": 0.92,
+      "增减": "-202123",
+      "变动比率": -1.71652559
+    }
+  ],
+  "dividends": {
+    "years_paid": 10,
+    "coverage": 1.0,
+    "mean_yield": 0.01541383236175
+  },
+  "insiders": {
+    "buy_count": 1,
+    "sell_count": 1,
+    "net_shares": 0.0,
+    "rows": 2
+  },
+  "esg": {
+    "date": "2026-04-30 00:00:00",
+    "total": 95.58,
+    "grade": "AAA",
+    "env": 82.73,
+    "social": 87.72,
+    "governance": 92.14
+  },
+  "financial_snapshot": {
+    "gross_margin": {
+      "n": 3,
+      "mean": 90.72109999999999,
+      "median": 91.142,
+      "std": 0.654882386387051,
+      "last": 91.142
+    },
+    "net_margin": {
+      "n": 10,
+      "mean": 51.142149999999994,
+      "median": 51.8228,
+      "std": 1.8867929771175203,
+      "last": 50.5279
+    },
+    "roe": {
+      "n": 10,
+      "mean": 30.772,
+      "median": 30.75,
+      "std": 3.727175337973785,
+      "last": 33.65
+    },
+    "leverage": {
+      "n": 10,
+      "mean": 22.75838,
+      "median": 21.9469,
+      "std": 4.897750269011272,
+      "last": 16.4154
+    },
+    "cash_to_ni": {
+      "n": 10,
+      "mean": 103.43599999999999,
+      "median": 103.16000000000001,
+      "std": 39.423871245731306,
+      "last": 72.11999999999999
+    },
+    "revenue_cagr": 0.17547623049177563,
+    "profit_cagr": 0.19377794881052268
+  },
+  "timeline": [
+    {
+      "date": "2025-12-30",
+      "dimension": "董事会行为",
+      "severity": "green",
+      "label": "内部人增持",
+      "delta": 5.0,
+      "title": "贵州茅台:北京市环球律师事务所关于贵州茅台酒股份有限公司控股股东增持公司股份之法律意见书"
+    },
+    {
+      "date": "2025-12-30",
+      "dimension": "董事会行为",
+      "severity": "green",
+      "label": "内部人增持",
+      "delta": 5.0,
+      "title": "贵州茅台:贵州茅台关于控股股东增持股份结果的公告"
+    },
+    {
+      "date": "2025-10-28",
+      "dimension": "董事会行为",
+      "severity": "watch",
+      "label": "董事长变动",
+      "delta": -5.0,
+      "title": "贵州茅台:贵州茅台关于董事长辞职的公告"
+    },
+    {
+      "date": "2025-09-02",
+      "dimension": "董事会行为",
+      "severity": "green",
+      "label": "内部人增持",
+      "delta": 5.0,
+      "title": "贵州茅台:贵州茅台控股股东增持股份进展公告"
+    },
+    {
+      "date": "2025-08-30",
+      "dimension": "董事会行为",
+      "severity": "green",
+      "label": "内部人增持",
+      "delta": 5.0,
+      "title": "贵州茅台:贵州茅台控股股东增持股份计划公告"
+    },
+    {
+      "date": "2024-05-01",
+      "dimension": "董事会行为",
+      "severity": "watch",
+      "label": "董事长变动",
+      "delta": -5.0,
+      "title": "贵州茅台:贵州茅台关于董事长辞职的公告"
+    },
+    {
+      "date": "2024-04-03",
+      "dimension": "管理文化",
+      "severity": "watch",
+      "label": "更换审计机构",
+      "delta": -3.0,
+      "title": "贵州茅台:贵州茅台关于变更会计师事务所的公告"
+    },
+    {
+      "date": "2023-10-27",
+      "dimension": "董事会行为",
+      "severity": "watch",
+      "label": "独董辞职",
+      "delta": -4.0,
+      "title": "贵州茅台:贵州茅台关于独立董事辞职的公告"
+    },
+    {
+      "date": "2023-08-21",
+      "dimension": "董事会行为",
+      "severity": "watch",
+      "label": "董监高辞职",
+      "delta": -1.8,
+      "title": "贵州茅台:贵州茅台关于董事辞职的公告"
+    },
+    {
+      "date": "2023-06-28",
+      "dimension": "董事会行为",
+      "severity": "green",
+      "label": "内部人增持",
+      "delta": 3.0,
+      "title": "贵州茅台:贵州茅台关于控股股东增持公司股票计划实施结果的公告"
+    },
+    {
+      "date": "2023-02-11",
+      "dimension": "董事会行为",
+      "severity": "green",
+      "label": "内部人增持",
+      "delta": 3.0,
+      "title": "贵州茅台:贵州茅台关于控股股东增持公司股票计划实施进展的公告"
+    },
+    {
+      "date": "2022-11-29",
+      "dimension": "董事会行为",
+      "severity": "green",
+      "label": "内部人增持",
+      "delta": 3.0,
+      "title": "600519:贵州茅台控股股东增持公司股票计划公告"
+    },
+    {
+      "date": "2022-09-24",
+      "dimension": "董事会行为",
+      "severity": "watch",
+      "label": "独董辞职",
+      "delta": -2.4,
+      "title": "600519:贵州茅台关于独立董事辞职的公告"
+    },
+    {
+      "date": "2021-01-08",
+      "dimension": "董事会行为",
+      "severity": "watch",
+      "label": "董监高辞职",
+      "delta": -1.8,
+      "title": "600519:贵州茅台关于董事辞职的公告"
+    },
+    {
+      "date": "2020-12-24",
+      "dimension": "行为准则",
+      "severity": "watch",
+      "label": "监管问询",
+      "delta": -3.6,
+      "title": "关于贵州茅台酒股份有限公司的监管工作函"
+    },
+    {
+      "date": "2020-12-19",
+      "dimension": "董事会行为",
+      "severity": "watch",
+      "label": "独董辞职",
+      "delta": -2.4,
+      "title": "600519:贵州茅台关于独立董事辞职的公告"
+    },
+    {
+      "date": "2019-08-10",
+      "dimension": "行为准则",
+      "severity": "watch",
+      "label": "监管问询",
+      "delta": -2.1,
+      "title": "600519:贵州茅台关于上海证券交易所监管工作函的回复公告"
+    },
+    {
+      "date": "2019-05-08",
+      "dimension": "行为准则",
+      "severity": "watch",
+      "label": "监管问询",
+      "delta": -2.1,
+      "title": "关于贵州茅台酒股份有限公司的监管工作函"
+    },
+    {
+      "date": "2019-05-08",
+      "dimension": "行为准则",
+      "severity": "watch",
+      "label": "监管问询",
+      "delta": -2.1,
+      "title": "600519:贵州茅台关于收到上海证券交易所监管工作函的公告"
+    },
+    {
+      "date": "2017-02-15",
+      "dimension": "董事会行为",
+      "severity": "watch",
+      "label": "董监高辞职",
+      "delta": -1.05,
+      "title": "600519:贵州茅台关于部分监事辞职的公告"
+    },
+    {
+      "date": "2016-09-12",
+      "dimension": "行为准则",
+      "severity": "watch",
+      "label": "监管问询",
+      "delta": -2.1,
+      "title": "关于贵州茅台股份有限公司的监管工作函"
+    }
+  ]
+}

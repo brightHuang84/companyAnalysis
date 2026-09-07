@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>微软四十年事件台账</title>
+  <meta name="description" content="从 1986 年上市起，逐条对照新闻与监管原文：当时背景、决策原因、决策目录、最终效果。" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="index.html">事件台账</a>
+    <a href="index.html">主页</a>
+    <a href="msft.html" class="on">微软</a>
+  </nav>
+
+  <header class="top">
+    <p class="kicker">NASDAQ: MSFT · IPO 1986-03-13</p>
+    <h1>微软四十年：背景、决策与效果</h1>
+    <p class="lede">
+      从上市第一天起整理物质事件。财务只用来核验项目有没有做成。
+      决策原因凡未写进公开文件的，标成推断，不当成事实。
+    </p>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <section class="filters" aria-label="筛选">
+    <form class="search-box compact" id="search-form" role="search">
+      <label class="sr" for="q">在台账中搜索</label>
+      <input type="search" id="q" name="q" placeholder="在 91 条里搜：IE、诺基亚、裁员、Recall…" autocomplete="off" />
+      <button type="submit">搜索</button>
+    </form>
+    <div class="pills" id="decades"></div>
+    <div class="pills" id="types"></div>
+    <div class="pills" id="grades"></div>
+  </section>
+
+  <main class="layout">
+    <aside>
+      <p class="count" id="count"></p>
+      <ol class="list" id="list"></ol>
+    </aside>
+    <article class="detail" id="detail"></article>
+  </main>
+
+  <footer>
+    <p><a href="index.html">回主页</a> · 内容改 JSON 后重新发布。不是投资建议。</p>
+  </footer>
+  <script src="site.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

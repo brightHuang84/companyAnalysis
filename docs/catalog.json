@@ -1,0 +1,15 @@
+{
+  "as_of": "2026-09-07",
+  "issuers": [
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft Corporation",
+      "slug": "msft",
+      "exchange": "NASDAQ",
+      "ipo": "1986-03-13",
+      "event_count": 91,
+      "json": "msft.json",
+      "page": "msft.html"
+    }
+  ]
+}

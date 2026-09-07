@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>上市公司事件台账</title>
+  <meta name="description" content="从上市第一天起整理物质事件：当时背景、决策原因、决策目录、最终效果。可检索。" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="index.html">事件台账</a>
+    <a href="index.html" class="on">主页</a>
+    <a href="msft.html">微软</a>
+  </nav>
+
+  <header class="hero">
+    <p class="kicker">公开新闻与监管原文对照</p>
+    <h1>先看事件和承诺，再用财报核对</h1>
+    <p class="lede">
+      财务不是主证据。每一条写当时背景、为什么拍板、桌上有哪几条路、后来对没对上。
+      没写进公开文件的原因，标成推断。
+    </p>
+    <form class="search-box" id="search-form" role="search">
+      <label class="sr" for="q">搜索事件</label>
+      <input type="search" id="q" name="q" placeholder="搜公司、产品、并购、监管、裁员… 例如 Azure、Activision、欧盟" autocomplete="off" />
+      <button type="submit">搜索</button>
+    </form>
+    <p class="hint" id="search-hint">当前可检索微软 1986–2026 共 91 条。</p>
+  </header>
+
+  <section class="wrap" id="results-wrap" hidden>
+    <h2 class="section-title" id="results-title">搜索结果</h2>
+    <ol class="results" id="results"></ol>
+  </section>
+
+  <section class="wrap" id="catalog-wrap">
+    <h2 class="section-title">公司</h2>
+    <div class="cards" id="catalog"></div>
+  </section>
+
+  <footer>
+    <p>不是投资建议。承诺与效果默认未核实，除非核验栏写明多源一致。</p>
+  </footer>
+  <script src="site.js"></script>
+  <script src="home.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+.venv/
+.cursor/
+__pycache__/
+*.pyc
+.env
+.env.*
+data/filings/
+data/cache/
+*.pdf
+.DS_Store

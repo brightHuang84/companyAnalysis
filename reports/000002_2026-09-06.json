@@ -1,0 +1,640 @@
+{
+  "code": "000002",
+  "name": "万科Ａ",
+  "list_date": "1991-01-29",
+  "years_listed": 35.6,
+  "exchange": "SZ",
+  "board": "主板",
+  "industry": "K 房地产",
+  "as_of": "2026-09-06",
+  "window_years": 10,
+  "business": {
+    "股票代码": "000002",
+    "主营业务": "房地产开发及相关资产经营和物业服务。",
+    "产品类型": "商品住宅",
+    "产品名称": "商品住宅",
+    "经营范围": "兴办实业(具体项目另行申报)；国内商业；物资供销业(不含专营、专控、专卖商品)；进出口业务(按深经发审证字第113号外贸企业审定证书规定办理)；房地产开发。"
+  },
+  "is_platform": false,
+  "credibility": {
+    "score": 52.3,
+    "band": "中",
+    "weights": {
+      "business_model": 0.16,
+      "conduct": 0.24,
+      "board": 0.18,
+      "culture": 0.14,
+      "employees": 0.1,
+      "consumers": 0.1,
+      "users": 0.08
+    }
+  },
+  "sustainability": {
+    "score": 49.8,
+    "band": "中低",
+    "weights": {
+      "business_model": 0.26,
+      "conduct": 0.1,
+      "board": 0.14,
+      "culture": 0.1,
+      "employees": 0.14,
+      "consumers": 0.13,
+      "users": 0.13
+    },
+    "financial": {
+      "score": 43.0,
+      "band": "中低",
+      "notes": [
+        {
+          "item": "资产负债率",
+          "detail": "79.52（风险高）",
+          "delta": -8
+        },
+        {
+          "item": "流动比率",
+          "detail": "1.23",
+          "delta": 0.0
+        },
+        {
+          "item": "净资产收益率",
+          "detail": "2.41（偏弱）",
+          "delta": -7
+        }
+      ]
+    }
+  },
+  "dimensions": {
+    "business_model": {
+      "id": "business_model",
+      "label": "经营模式",
+      "score": 52.2,
+      "raw_score": 52.2,
+      "band": "中",
+      "confidence": "高",
+      "evidence_n": 38,
+      "notes": [
+        {
+          "item": "毛利率稳定性",
+          "detail": "标准差 3.31，结构稳定",
+          "delta": 6.0
+        },
+        {
+          "item": "经营现金流/净利润",
+          "detail": "79.86",
+          "delta": 0.0
+        },
+        {
+          "item": "非主营比重",
+          "detail": "11.19",
+          "delta": 0.0
+        },
+        {
+          "item": "主营利润比重",
+          "detail": "104.33（偏强）",
+          "delta": 5
+        },
+        {
+          "item": "收入连续下滑",
+          "detail": "3 年",
+          "delta": -10
+        },
+        {
+          "item": "收入复合增速",
+          "detail": "-0.3%",
+          "delta": 0
+        }
+      ],
+      "flags": [
+        {
+          "label": "业务收缩/转型",
+          "severity": "watch",
+          "count": 1,
+          "delta": -4.0,
+          "latest_date": "2024-05-28",
+          "latest_title": "万科A:关于公开挂牌出售资产暨关联交易公告"
+        },
+        {
+          "label": "重大重组",
+          "severity": "watch",
+          "count": 27,
+          "delta": -2.8,
+          "latest_date": "2016-07-18",
+          "latest_title": "万科A:关于重大资产重组的进展公告"
+        }
+      ],
+      "summary": "经营模式 52 分（中）。收入连续下滑 3 年；毛利率稳定性 标准差 3.31，结构稳定；公告信号：业务收缩/转型×1。"
+    },
+    "conduct": {
+      "id": "conduct",
+      "label": "行为准则",
+      "score": 57.5,
+      "raw_score": 57.5,
+      "band": "中",
+      "confidence": "高",
+      "evidence_n": 27,
+      "notes": [
+        {
+          "item": "持续信息披露",
+          "detail": "窗口内公告 2032 份",
+          "delta": 4
+        },
+        {
+          "item": "近三年无监管红旗",
+          "detail": "近三年标题未命中处罚/问询/立案",
+          "delta": 6
+        }
+      ],
+      "flags": [
+        {
+          "label": "监管问询",
+          "severity": "watch",
+          "count": 10,
+          "delta": -7.01,
+          "latest_date": "2023-07-18",
+          "latest_title": "万科A:关于延期回复深圳证券交易所关于公司向特定对象发行A股股票审核问询函的公告"
+        },
+        {
+          "label": "监管关注函",
+          "severity": "watch",
+          "count": 11,
+          "delta": -3.5,
+          "latest_date": "2016-08-10",
+          "latest_title": "万科A:关于深圳证券交易所《关于对万科企业股份有限公司的关注函》(公司部关注函[2016]第142号)的回复"
+        }
+      ],
+      "summary": "行为准则 58 分（中）。近三年无监管红旗 近三年标题未命中处罚/问询/立案；持续信息披露 窗口内公告 2032 份；公告信号：监管问询×10。"
+    },
+    "board": {
+      "id": "board",
+      "label": "董事会行为",
+      "score": 42.8,
+      "raw_score": 42.8,
+      "band": "中低",
+      "confidence": "高",
+      "evidence_n": 17,
+      "notes": [
+        {
+          "item": "董监高持股变动",
+          "detail": "买 0 / 卖 0",
+          "delta": 0
+        }
+      ],
+      "flags": [
+        {
+          "label": "关联融资/担保",
+          "severity": "watch",
+          "count": 9,
+          "delta": -9.97,
+          "latest_date": "2026-07-22",
+          "latest_title": "万科A:关于深铁集团向公司提供股东借款暨关联交易的公告"
+        },
+        {
+          "label": "董监高辞职",
+          "severity": "watch",
+          "count": 4,
+          "delta": -3.09,
+          "latest_date": "2021-10-13",
+          "latest_title": "万科A:关于董事辞职的公告"
+        },
+        {
+          "label": "股权质押",
+          "severity": "watch",
+          "count": 2,
+          "delta": -2.1,
+          "latest_date": "2017-03-17",
+          "latest_title": "万科A:关于股东进行股票质押式回购的公告"
+        }
+      ],
+      "summary": "董事会行为 43 分（中低）。窗口内无显著加减分项；公告信号：关联融资/担保×9。"
+    },
+    "culture": {
+      "id": "culture",
+      "label": "管理文化",
+      "score": 48.0,
+      "raw_score": 48.0,
+      "band": "中低",
+      "confidence": "高",
+      "evidence_n": 13,
+      "notes": [
+        {
+          "item": "三项费用比重",
+          "detail": "6.54（风险低）",
+          "delta": 5
+        },
+        {
+          "item": "经营现金流/收入",
+          "detail": "8.97",
+          "delta": 0.0
+        }
+      ],
+      "flags": [
+        {
+          "label": "持续经营不确定性",
+          "severity": "watch",
+          "count": 2,
+          "delta": -12.0,
+          "latest_date": "2026-04-01",
+          "latest_title": "万科A:董事会及审计委员会关于带强调事项段的无保留意见专项说明"
+        },
+        {
+          "label": "更换审计机构",
+          "severity": "watch",
+          "count": 1,
+          "delta": -3.0,
+          "latest_date": "2025-04-30",
+          "latest_title": "万科A:关于拟变更会计师事务所的公告"
+        }
+      ],
+      "summary": "管理文化 48 分（中低）。三项费用比重 6.54（风险低）；公告信号：持续经营不确定性×2。"
+    },
+    "employees": {
+      "id": "employees",
+      "label": "对待员工",
+      "score": 55.9,
+      "raw_score": 57.0,
+      "band": "中",
+      "confidence": "中",
+      "evidence_n": 3,
+      "notes": [
+        {
+          "item": "披露缺口",
+          "detail": "年报全文中的薪酬/社保/流失率尚未逐页解析，主要依赖公告标题与 ESG 社会分",
+          "delta": 0
+        },
+        {
+          "item": "华证 ESG 社会分",
+          "detail": "79.0",
+          "delta": 3
+        },
+        {
+          "item": "劳动相关公告",
+          "detail": "窗口内未命中裁员/仲裁/事故标题",
+          "delta": 0
+        }
+      ],
+      "flags": [],
+      "summary": "对待员工 56 分（中）。华证 ESG 社会分 79.0。"
+    },
+    "consumers": {
+      "id": "consumers",
+      "label": "对待消费者",
+      "score": 59.4,
+      "raw_score": 61.0,
+      "band": "中",
+      "confidence": "中",
+      "evidence_n": 3,
+      "notes": [
+        {
+          "item": "披露缺口",
+          "detail": "客诉率、返修率、广告处罚全文未入库，主要依赖召回/质量/虚假宣传类公告",
+          "delta": 0
+        },
+        {
+          "item": "无质量红旗",
+          "detail": "窗口内未命中召回/虚假宣传/重大质量标题",
+          "delta": 5
+        }
+      ],
+      "flags": [],
+      "summary": "对待消费者 59 分（中）。无质量红旗 窗口内未命中召回/虚假宣传/重大质量标题。"
+    },
+    "users": {
+      "id": "users",
+      "label": "对待用户",
+      "score": 51.1,
+      "raw_score": 52.0,
+      "band": "中",
+      "confidence": "低",
+      "evidence_n": 0,
+      "notes": [
+        {
+          "item": "企业类型",
+          "detail": "主营描述未显示平台/互联网用户模式，用户维度证据天然偏少，分数向中性收缩",
+          "delta": 0
+        }
+      ],
+      "flags": [],
+      "summary": "对待用户 51 分（中）。窗口内无显著加减分项。",
+      "not_applicable": true
+    }
+  },
+  "coverage": {
+    "annual_reports_proxy": 10,
+    "notices": 2032,
+    "classified_flags": 67,
+    "esg": true,
+    "insider_rows": 67,
+    "limitations": [
+      "年报/半年报/ESG 报告 PDF 正文尚未逐句抽取，文化、员工、消费者、用户四维目前以公告标题 + 财务指标 + ESG 评分为主。",
+      "问询函正文、处罚决定书全文、客诉与诉讼细节需要监管函件与裁判文书库补齐。",
+      "分数是证据加权的研究框架，不是投资建议，也不能替代律师/审计尽调。"
+    ]
+  },
+  "shareholders": [
+    {
+      "名次": 1,
+      "股东名称": "深圳市地铁集团有限公司",
+      "股份类型": "流通A股",
+      "持股数": 3242810791,
+      "占总股本持股比例": 27.18,
+      "增减": "不变",
+      "变动比率": null
+    },
+    {
+      "名次": 2,
+      "股东名称": "HKSCC NOMINEES LIMITED",
+      "股份类型": "流通H股",
+      "持股数": 2206363864,
+      "占总股本持股比例": 18.49,
+      "增减": "-318",
+      "变动比率": -1.441e-05
+    },
+    {
+      "名次": 3,
+      "股东名称": "中央汇金资产管理有限责任公司",
+      "股份类型": "流通A股",
+      "持股数": 185478200,
+      "占总股本持股比例": 1.55,
+      "增减": "不变",
+      "变动比率": null
+    },
+    {
+      "名次": 4,
+      "股东名称": "香港中央结算有限公司",
+      "股份类型": "流通A股",
+      "持股数": 133761437,
+      "占总股本持股比例": 1.12,
+      "增减": "-38210372",
+      "变动比率": -22.21897427
+    },
+    {
+      "名次": 5,
+      "股东名称": "中国证券金融股份有限公司",
+      "股份类型": "流通A股",
+      "持股数": 132669394,
+      "占总股本持股比例": 1.11,
+      "增减": "不变",
+      "变动比率": null
+    }
+  ],
+  "dividends": {
+    "years_paid": 7,
+    "coverage": 0.7,
+    "mean_yield": 0.04388967508857143
+  },
+  "insiders": {
+    "buy_count": 0,
+    "sell_count": 0,
+    "net_shares": 0.0,
+    "rows": 67
+  },
+  "esg": {
+    "date": "2026-04-30 00:00:00",
+    "total": 85.65,
+    "grade": "A",
+    "env": 85.11,
+    "social": 79.0,
+    "governance": 80.51
+  },
+  "financial_snapshot": {
+    "gross_margin": {
+      "n": 3,
+      "mean": 33.66386666666667,
+      "median": 34.0956,
+      "std": 3.3075392880844543,
+      "last": 37.4816
+    },
+    "net_margin": {
+      "n": 10,
+      "mean": 3.9524299999999997,
+      "median": 10.0984,
+      "std": 16.76297270904239,
+      "last": -39.3304
+    },
+    "roe": {
+      "n": 10,
+      "mean": 2.4070000000000022,
+      "median": 14.02,
+      "std": 29.16671632186249,
+      "last": -75.75
+    },
+    "leverage": {
+      "n": 10,
+      "mean": 79.52080999999998,
+      "median": 80.13825,
+      "std": 4.0088272026741185,
+      "last": 76.8906
+    },
+    "cash_to_ni": {
+      "n": 8,
+      "mean": 79.85749999999999,
+      "median": 75.55000000000001,
+      "std": 68.47977142010623,
+      "last": 19.13
+    },
+    "revenue_cagr": -0.003298030378739436,
+    "profit_cagr": null
+  },
+  "timeline": [
+    {
+      "date": "2026-07-22",
+      "dimension": "董事会行为",
+      "severity": "watch",
+      "label": "关联融资/担保",
+      "delta": -5.0,
+      "title": "万科A:关于深铁集团向公司提供股东借款暨关联交易的公告"
+    },
+    {
+      "date": "2026-05-13",
+      "dimension": "董事会行为",
+      "severity": "watch",
+      "label": "关联融资/担保",
+      "delta": -5.0,
+      "title": "万科A:关于深铁集团向公司提供25亿元股东借款额度并由公司提供担保暨日常关联交易公告"
+    },
+    {
+      "date": "2026-05-13",
+      "dimension": "董事会行为",
+      "severity": "watch",
+      "label": "关联融资/担保",
+      "delta": -5.0,
+      "title": "万科A:关于就深铁集团220亿股东借款签署补充协议暨日常关联交易公告"
+    },
+    {
+      "date": "2026-04-01",
+      "dimension": "管理文化",
+      "severity": "watch",
+      "label": "持续经营不确定性",
+      "delta": -8.0,
+      "title": "万科A:董事会及审计委员会关于带强调事项段的无保留意见专项说明"
+    },
+    {
+      "date": "2026-04-01",
+      "dimension": "管理文化",
+      "severity": "watch",
+      "label": "持续经营不确定性",
+      "delta": -8.0,
+      "title": "万科A:德勤华永会计师事务所(特殊普通合伙)关于2025年度财务报表审计报告带有持续经营重大不确定性段落的无保留意见的专项说明"
+    },
+    {
+      "date": "2026-04-01",
+      "dimension": "董事会行为",
+      "severity": "watch",
+      "label": "关联融资/担保",
+      "delta": -5.0,
+      "title": "万科A:关于提请股东会授权公司及控股子公司对外提供财务资助的公告"
+    },
+    {
+      "date": "2025-11-03",
+      "dimension": "董事会行为",
+      "severity": "watch",
+      "label": "关联融资/担保",
+      "delta": -5.0,
+      "title": "万科Ａ:关于深铁集团向公司提供股东借款并由公司提供担保暨日常关联交易公告"
+    },
+    {
+      "date": "2025-04-30",
+      "dimension": "管理文化",
+      "severity": "watch",
+      "label": "更换审计机构",
+      "delta": -3.0,
+      "title": "万科A:关于拟变更会计师事务所的公告"
+    },
+    {
+      "date": "2025-04-01",
+      "dimension": "董事会行为",
+      "severity": "watch",
+      "label": "关联融资/担保",
+      "delta": -5.0,
+      "title": "万科A:关于提请股东大会授权公司及控股子公司对外提供财务资助的公告"
+    },
+    {
+      "date": "2025-02-11",
+      "dimension": "董事会行为",
+      "severity": "watch",
+      "label": "关联融资/担保",
+      "delta": -5.0,
+      "title": "万科A:关于深铁集团向公司提供股东借款暨关联交易的公告"
+    },
+    {
+      "date": "2024-05-28",
+      "dimension": "经营模式",
+      "severity": "watch",
+      "label": "业务收缩/转型",
+      "delta": -4.0,
+      "title": "万科A:关于公开挂牌出售资产暨关联交易公告"
+    },
+    {
+      "date": "2024-03-29",
+      "dimension": "董事会行为",
+      "severity": "watch",
+      "label": "关联融资/担保",
+      "delta": -5.0,
+      "title": "万科A:关于提请股东大会授权公司及控股子公司对外提供财务资助的公告"
+    },
+    {
+      "date": "2023-07-18",
+      "dimension": "行为准则",
+      "severity": "watch",
+      "label": "监管问询",
+      "delta": -3.6,
+      "title": "万科A:关于延期回复深圳证券交易所关于公司向特定对象发行A股股票审核问询函的公告"
+    },
+    {
+      "date": "2023-07-04",
+      "dimension": "行为准则",
+      "severity": "watch",
+      "label": "监管问询",
+      "delta": -3.6,
+      "title": "万科A:关于延期回复深圳证券交易所关于公司向特定对象发行A股股票审核问询函的公告"
+    },
+    {
+      "date": "2023-06-16",
+      "dimension": "行为准则",
+      "severity": "watch",
+      "label": "监管问询",
+      "delta": -3.6,
+      "title": "万科A:关于延期回复深圳证券交易所关于公司向特定对象发行A股股票审核问询函的公告"
+    },
+    {
+      "date": "2023-05-24",
+      "dimension": "行为准则",
+      "severity": "watch",
+      "label": "监管问询",
+      "delta": -3.6,
+      "title": "关于万科企业股份有限公司申请向特定对象发行股票的审核问询函"
+    },
+    {
+      "date": "2023-02-13",
+      "dimension": "董事会行为",
+      "severity": "watch",
+      "label": "关联融资/担保",
+      "delta": -3.0,
+      "title": "万科A:关于本次非公开发行股票不存在直接或通过利益相关方向参与认购的投资者提供财务资助或补偿的公告"
+    },
+    {
+      "date": "2021-10-13",
+      "dimension": "董事会行为",
+      "severity": "watch",
+      "label": "董监高辞职",
+      "delta": -1.8,
+      "title": "万科A:关于董事辞职的公告"
+    },
+    {
+      "date": "2021-04-20",
+      "dimension": "董事会行为",
+      "severity": "watch",
+      "label": "董监高辞职",
+      "delta": -1.8,
+      "title": "万科A:关于董事辞职的公告"
+    },
+    {
+      "date": "2019-01-16",
+      "dimension": "董事会行为",
+      "severity": "watch",
+      "label": "董监高辞职",
+      "delta": -1.05,
+      "title": "万科A:关于董事辞职的公告"
+    },
+    {
+      "date": "2017-06-01",
+      "dimension": "董事会行为",
+      "severity": "watch",
+      "label": "董监高辞职",
+      "delta": -1.05,
+      "title": "万科A:关于监事辞职的公告"
+    },
+    {
+      "date": "2017-03-17",
+      "dimension": "董事会行为",
+      "severity": "watch",
+      "label": "股权质押",
+      "delta": -1.4,
+      "title": "万科A:关于股东进行股票质押式回购的公告"
+    },
+    {
+      "date": "2016-09-12",
+      "dimension": "行为准则",
+      "severity": "watch",
+      "label": "监管问询",
+      "delta": -2.1,
+      "title": "万科A:关于深圳证券交易所公司部问询函[2016]第317号的复函"
+    },
+    {
+      "date": "2016-08-10",
+      "dimension": "行为准则",
+      "severity": "watch",
+      "label": "监管关注函",
+      "delta": -1.75,
+      "title": "万科A:关于深圳证券交易所《关于对万科企业股份有限公司的关注函》(公司部关注函[2016]第142号)的回复"
+    },
+    {
+      "date": "2016-08-05",
+      "dimension": "行为准则",
+      "severity": "watch",
+      "label": "监管关注函",
+      "delta": -1.75,
+      "title": "000002:万科A关注函(2016/08/05)"
+    }
+  ]
+}
