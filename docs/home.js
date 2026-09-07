@@ -67,6 +67,12 @@ function renderCatalog() {
       <h3>份额、订阅、单价</h3>
       <p>按年列出席位增速、绝对席位、公开标价和第三方份额。</p>
       <p class="note">年报给增速和营收；标价和市场份额另行标注来源。</p>
+    </a>
+    <a class="card" href="company.html">
+      <p class="kicker">MSFT · 公司信息</p>
+      <h3>董事会报告</h3>
+      <p>每年一份：当时环境、项目进展、未来展望，外加董事会执行时间线。</p>
+      <p class="note">美股没有 A 股「董事会报告」科目，用股东信和年报 MD&A 按财年对齐。</p>
     </a>`;
   catalogEl.innerHTML = issuerCards + extra;
 }

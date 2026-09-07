@@ -203,7 +203,7 @@ function renderDetail(rows) {
     <h3>最终效果</h3>
     <p>${esc(row.effect_far)}</p>
     ${financeBlock(row.finance)}
-    <p class="note">新闻对照：${esc(row.news)} · 事实核验：${esc(row.verify)} · <a href="products.html">产品线：份额 / 订阅 / 单价</a></p>
+    <p class="note">新闻对照：${esc(row.news)} · 事实核验：${esc(row.verify)} · <a href="products.html">产品线：份额 / 订阅 / 单价</a> · <a href="company.html${row.finance && row.finance.fy ? "?fy=" + row.finance.fy : ""}">当年董事会报告</a></p>
   `;
 }
 

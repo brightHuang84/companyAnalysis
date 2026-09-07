@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>微软公司信息：董事会报告</title>
+  <meta name="description" content="按财年整理微软董事会报告：当时环境、项目进展、未来展望，以及董事会执行时间线。美股没有 A 股「董事会报告」科目，本页用股东信、年报 MD&A 和物质事件折成同等结构。" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="index.html">事件台账</a>
+    <a href="index.html">主页</a>
+    <a href="msft.html">微软事件</a>
+    <a href="products.html">产品线</a>
+    <a href="company.html" class="on">公司信息</a>
+  </nav>
+
+  <header class="top">
+    <p class="kicker">NASDAQ: MSFT · 公司信息</p>
+    <h1>董事会报告，一年一份</h1>
+    <p class="lede">
+      美国 10-K 没有 A 股那种「董事会报告」章节。这里按财年（截止 6 月 30 日）把股东信、年报 MD&A 和当年物质事件折成同一组标题：当时环境、项目进展、未来展望。
+      上面先是董事会自己怎么换人、怎么分红、怎么交班的执行时间线。
+    </p>
+    <div class="stats" id="hero"></div>
+  </header>
+
+  <main class="wrap company">
+    <p class="callout">
+      <b>怎么读来源。</b>
+      <span class="badge">股东信综述</span> 压缩公开致股东信，不是原文。
+      <span class="badge">年报+事件综合</span> 用 10-K MD&A 和台账拼出来，当年没有可核的股东信网页档。
+      <span class="badge">业绩稿+10-K</span> 财年刚结束，图文年报可能还没上线。
+    </p>
+
+    <h2 class="section-title">董事会执行时间线</h2>
+    <p class="hint">从上市起到现在，董事会实际拍板过的交班、董事长更迭和资本回报政策。不是每年都有人事，空年看下面的年度报告。</p>
+    <ol class="timeline" id="timeline"></ol>
+
+    <h2 class="section-title">按年报告</h2>
+    <section class="filters" aria-label="年代">
+      <div class="pills" id="decades"></div>
+    </section>
+  </main>
+
+  <div class="layout">
+    <aside>
+      <p class="count" id="count"></p>
+      <ol class="list" id="list"></ol>
+    </aside>
+    <article class="detail" id="detail"></article>
+  </div>
+
+  <footer>
+    <p><a href="msft.html">回事件台账</a> · 股东信综述不是原文翻译。不是投资建议。</p>
+  </footer>
+  <script src="site.js"></script>
+  <script src="company.js"></script>
+</body>
+</html>

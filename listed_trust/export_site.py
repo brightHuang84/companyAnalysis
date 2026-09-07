@@ -21,6 +21,9 @@ def main() -> None:
     lines = ROOT / "data" / "issuers" / "MSFT" / "product_lines.json"
     if lines.exists():
         shutil.copyfile(lines, DOCS / "product_lines.json")
+    board = ROOT / "data" / "issuers" / "MSFT" / "board_reports.json"
+    if board.exists():
+        shutil.copyfile(board, DOCS / "board_reports.json")
     payload = json.loads(MSFT.read_text(encoding="utf-8"))
     catalog = {
         "as_of": payload.get("as_of"),
