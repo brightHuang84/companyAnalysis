@@ -1,0 +1,85 @@
+{
+  "issuer": "Microsoft Corporation",
+  "ticker": "MSFT",
+  "unit": "USD millions",
+  "fiscal_year_end": "June 30",
+  "as_of": "2026-09-07",
+  "notes": [
+    "微软不披露 Windows / Office / Xbox / Copilot 等单品研发与单品利润表。产品开发费用用当年公司研发支出作背景；单品回报只在并购对价、减值、罚金、分部营业利润可核对时下结论。",
+    "FY2016–FY2017 用后来 10-K 按 ASC 606 重述后的比较数（营收 911.54 亿、965.71 亿），不是当年首次公布的 853.20 亿、899.50 亿。",
+    "FY2002–FY2004 研发有股权激励重述：2004 年报把 2002/2003 研发改成 63.0 亿、66.0 亿；本表 2002–2003 研发仍用重述前口径，与 2001 年连续。FY1992 营业利润由 1993 年报所称同比增长约 32% 反推，约数。",
+    "毛利：FY1986、FY1993–FY1995 来自当年年报成本；FY2012 起用后续 10-K / 业绩稿。中间年份未填，不倒推。",
+    "来源：1986 年报；1993–1996 Form 10-K；FY2012–FY2026 Macrotrends 与公司业绩稿交叉；研发序列对照 10-K / 业绩稿；FY2026 取 2026-07-29 业绩稿。"
+  ],
+  "years": [
+    {"fy": 1986, "revenue": 198, "gross_profit": 153, "rd": 11, "operating_income": 61, "net_income": 39},
+    {"fy": 1987, "revenue": 346, "gross_profit": null, "rd": 38, "operating_income": 127, "net_income": 72},
+    {"fy": 1988, "revenue": 591, "gross_profit": null, "rd": 70, "operating_income": 187, "net_income": 124},
+    {"fy": 1989, "revenue": 804, "gross_profit": null, "rd": 110, "operating_income": 242, "net_income": 171},
+    {"fy": 1990, "revenue": 1183, "gross_profit": null, "rd": 181, "operating_income": 393, "net_income": 279},
+    {"fy": 1991, "revenue": 1843, "gross_profit": null, "rd": 235, "operating_income": 650, "net_income": 463},
+    {"fy": 1992, "revenue": 2759, "gross_profit": null, "rd": 352, "operating_income": 1005, "net_income": 708},
+    {"fy": 1993, "revenue": 3753, "gross_profit": 3120, "rd": 470, "operating_income": 1326, "net_income": 953},
+    {"fy": 1994, "revenue": 4649, "gross_profit": 3886, "rd": 610, "operating_income": 1726, "net_income": 1146},
+    {"fy": 1995, "revenue": 5937, "gross_profit": 5060, "rd": 860, "operating_income": 2038, "net_income": 1453},
+    {"fy": 1996, "revenue": 8671, "gross_profit": null, "rd": 1432, "operating_income": 3078, "net_income": 2195},
+    {"fy": 1997, "revenue": 11358, "gross_profit": null, "rd": 1925, "operating_income": 4870, "net_income": 3454},
+    {"fy": 1998, "revenue": 14484, "gross_profit": null, "rd": 2502, "operating_income": 6710, "net_income": 4490},
+    {"fy": 1999, "revenue": 19747, "gross_profit": null, "rd": 2970, "operating_income": 10040, "net_income": 7785},
+    {"fy": 2000, "revenue": 22956, "gross_profit": null, "rd": 3775, "operating_income": 11010, "net_income": 9421},
+    {"fy": 2001, "revenue": 25296, "gross_profit": null, "rd": 4379, "operating_income": 11720, "net_income": 7346},
+    {"fy": 2002, "revenue": 28365, "gross_profit": null, "rd": 4307, "operating_income": 11910, "net_income": 7829},
+    {"fy": 2003, "revenue": 32187, "gross_profit": null, "rd": 4642, "operating_income": 9540, "net_income": 9993},
+    {"fy": 2004, "revenue": 36835, "gross_profit": null, "rd": 7779, "operating_income": 9030, "net_income": 8168},
+    {"fy": 2005, "revenue": 39788, "gross_profit": null, "rd": 6184, "operating_income": 14560, "net_income": 12254},
+    {"fy": 2006, "revenue": 44282, "gross_profit": null, "rd": 6584, "operating_income": 16470, "net_income": 12599},
+    {"fy": 2007, "revenue": 51122, "gross_profit": null, "rd": 7121, "operating_income": 18440, "net_income": 14065},
+    {"fy": 2008, "revenue": 60420, "gross_profit": null, "rd": 8164, "operating_income": 22270, "net_income": 17681},
+    {"fy": 2009, "revenue": 58437, "gross_profit": null, "rd": 9010, "operating_income": 20360, "net_income": 14569},
+    {"fy": 2010, "revenue": 62484, "gross_profit": null, "rd": 8714, "operating_income": 24098, "net_income": 18760},
+    {"fy": 2011, "revenue": 69943, "gross_profit": null, "rd": 9043, "operating_income": 27160, "net_income": 23150},
+    {"fy": 2012, "revenue": 73723, "gross_profit": 56193, "rd": 9811, "operating_income": 21763, "net_income": 16978},
+    {"fy": 2013, "revenue": 77849, "gross_profit": 57464, "rd": 10411, "operating_income": 26764, "net_income": 21863},
+    {"fy": 2014, "revenue": 86833, "gross_profit": 59755, "rd": 11381, "operating_income": 27759, "net_income": 22074},
+    {"fy": 2015, "revenue": 93580, "gross_profit": 60542, "rd": 12046, "operating_income": 18161, "net_income": 12193},
+    {"fy": 2016, "revenue": 91154, "gross_profit": 58374, "rd": 11988, "operating_income": 26078, "net_income": 20539},
+    {"fy": 2017, "revenue": 96571, "gross_profit": 62310, "rd": 13037, "operating_income": 29025, "net_income": 25489},
+    {"fy": 2018, "revenue": 110360, "gross_profit": 72007, "rd": 14726, "operating_income": 35058, "net_income": 16571},
+    {"fy": 2019, "revenue": 125843, "gross_profit": 82933, "rd": 16876, "operating_income": 42959, "net_income": 39240},
+    {"fy": 2020, "revenue": 143015, "gross_profit": 96937, "rd": 19269, "operating_income": 52959, "net_income": 44281},
+    {"fy": 2021, "revenue": 168088, "gross_profit": 115856, "rd": 20716, "operating_income": 69916, "net_income": 61271},
+    {"fy": 2022, "revenue": 198270, "gross_profit": 135620, "rd": 24512, "operating_income": 83383, "net_income": 72738},
+    {"fy": 2023, "revenue": 211915, "gross_profit": 146052, "rd": 27195, "operating_income": 88523, "net_income": 72361},
+    {"fy": 2024, "revenue": 245122, "gross_profit": 171008, "rd": 29510, "operating_income": 109433, "net_income": 88136},
+    {"fy": 2025, "revenue": 281724, "gross_profit": 193893, "rd": 32488, "operating_income": 128528, "net_income": 101832},
+    {"fy": 2026, "revenue": 331839, "gross_profit": 225465, "rd": 35562, "operating_income": 155237, "net_income": 133749, "capex": 115948}
+  ],
+  "segments": [
+    {
+      "fy": 2016,
+      "productivity": {"revenue": 26487, "operating_income": 12461},
+      "intelligent_cloud": {"revenue": 25042, "operating_income": 9358},
+      "more_personal_computing": {"revenue": 40460, "operating_income": 6142},
+      "note": "FY2016 业绩稿分部；公司与其他对账项未列入。"
+    },
+    {
+      "fy": 2024,
+      "productivity": {"revenue": 106820, "operating_income": 59661},
+      "intelligent_cloud": {"revenue": 87464, "operating_income": 37813},
+      "more_personal_computing": {"revenue": 50838, "operating_income": 11959}
+    },
+    {
+      "fy": 2025,
+      "productivity": {"revenue": 120810, "operating_income": 69773},
+      "intelligent_cloud": {"revenue": 106265, "operating_income": 44589},
+      "more_personal_computing": {"revenue": 54649, "operating_income": 14166}
+    },
+    {
+      "fy": 2026,
+      "productivity": {"revenue": 139996, "operating_income": 83879},
+      "intelligent_cloud": {"revenue": 137791, "operating_income": 56972},
+      "more_personal_computing": {"revenue": 54052, "operating_income": 14386},
+      "note": "FY2026 业绩稿。Azure 全年营收首次超过 1000 亿美元；Windows OEM -7%，Xbox 内容与服务 -10%。资本开支 1159 亿美元。"
+    }
+  ]
+}

@@ -237,7 +237,16 @@ h1 {
 }
 .detail p { margin: 0 0 8px; }
 .detail ul { margin: 0; padding-left: 1.1rem; }
-.detail li { margin: 4px 0; }
+.fin {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+  gap: 10px 14px;
+  margin: 8px 0 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+}
+.fin .stat b { font-size: 15px; }
 .badge {
   display: inline-block;
   font-size: 12px;

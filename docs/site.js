@@ -16,6 +16,14 @@ function gradeClass(grade) {
   return "";
 }
 
+function returnClass(grade) {
+  if (grade === "高回报" || grade === "正回报") return "ok";
+  if (grade === "减值收场" || grade === "战略未兑现") return "bad";
+  if (grade === "部分回收") return "mid";
+  if (grade === "监管成本" || grade === "未核实") return "warn";
+  return "";
+}
+
 function decadeOf(date) {
   const y = parseInt(String(date).slice(0, 4), 10);
   if (y < 1990) return "1986";
@@ -32,7 +40,16 @@ function haystack(row) {
     row.effect_near, row.effect_far, row.grade,
     ...(row.options || []),
     ...(row.decisions || []),
-  ].join("\n");
+    row.finance && row.finance.event_cash,
+    row.finance && row.finance.books_role,
+    row.finance && row.finance.product,
+    row.finance && row.finance.return_grade,
+    row.finance && row.finance.return_summary,
+    row.finance && row.finance.outlay_kind,
+    row.finance && row.finance.outlay_text,
+    row.finance && row.finance.product_line && row.finance.product_line.name,
+    row.finance && row.finance.product_line && (row.finance.product_line.paragraphs || []).join("\n"),
+  ].filter(Boolean).join("\n");
 }
 
 function snippet(row, q) {

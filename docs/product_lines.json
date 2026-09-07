@@ -1,0 +1,178 @@
+{
+  "unit": "USD millions",
+  "as_of": "2026-09-07",
+  "note": "微软不披露 Windows、Office、Azure、Xbox、Copilot 各自的营业利润。能核对的最细一级是分部营业利润。更细的产品只给营收、不给利润。分部口径 2014–2015 年切过一次，相邻年不完全可比。",
+  "lines": {
+    "windows": {
+      "name": "Windows",
+      "parent_now": "more_personal_computing",
+      "profit_grain": "2006–2013 为 Client / Windows 分部营业利润。2016 年起 Windows 利润并进「更多个人计算」，不再单列。",
+      "years": [
+        {"fy": 2006, "revenue": 13077, "operating_income": 10176, "label": "Client"},
+        {"fy": 2007, "revenue": 14844, "operating_income": 11338, "label": "Client"},
+        {"fy": 2008, "revenue": 16472, "operating_income": 12537, "label": "Client"},
+        {"fy": 2009, "revenue": 14690, "operating_income": 9569, "label": "Windows & Windows Live"},
+        {"fy": 2010, "revenue": 18789, "operating_income": 12193, "label": "Windows & Windows Live"},
+        {"fy": 2011, "revenue": 18815, "operating_income": 12040, "label": "Windows Division"},
+        {"fy": 2012, "revenue": 18844, "operating_income": 12005, "label": "Windows Division"},
+        {"fy": 2013, "revenue": 18680, "operating_income": 8943, "label": "Windows Division"}
+      ]
+    },
+    "office": {
+      "name": "Office / 生产力",
+      "parent_now": "productivity",
+      "profit_grain": "2006–2013 为 Microsoft Business Division（Office、Exchange、SharePoint、Dynamics）。2016 年起为生产力与业务流程（365、LinkedIn、Dynamics、Teams）。不是 PowerPoint 或 Teams 单品利润。",
+      "years": [
+        {"fy": 2006, "revenue": 14461, "operating_income": 9567, "label": "Microsoft Business Division"},
+        {"fy": 2007, "revenue": 16404, "operating_income": 10696, "label": "Microsoft Business Division"},
+        {"fy": 2008, "revenue": 18937, "operating_income": 12182, "label": "Microsoft Business Division"},
+        {"fy": 2009, "revenue": 18864, "operating_income": 11454, "label": "Microsoft Business Division"},
+        {"fy": 2010, "revenue": 19525, "operating_income": 12109, "label": "Microsoft Business Division"},
+        {"fy": 2011, "revenue": 22407, "operating_income": 14467, "label": "Microsoft Business Division"},
+        {"fy": 2012, "revenue": 24082, "operating_income": 15803, "label": "Microsoft Business Division"},
+        {"fy": 2013, "revenue": 24738, "operating_income": 16189, "label": "Microsoft Business Division"},
+        {"fy": 2016, "revenue": 25792, "operating_income": 11756, "label": "生产力与业务流程"},
+        {"fy": 2017, "revenue": 29870, "operating_income": 11389, "label": "生产力与业务流程"},
+        {"fy": 2018, "revenue": 35865, "operating_income": 12924, "label": "生产力与业务流程"},
+        {"fy": 2019, "revenue": 41160, "operating_income": 16219, "label": "生产力与业务流程"},
+        {"fy": 2020, "revenue": 46398, "operating_income": 18724, "label": "生产力与业务流程"},
+        {"fy": 2021, "revenue": 53915, "operating_income": 24351, "label": "生产力与业务流程"},
+        {"fy": 2022, "revenue": 63364, "operating_income": 29687, "label": "生产力与业务流程"},
+        {"fy": 2023, "revenue": 69274, "operating_income": 34189, "label": "生产力与业务流程"},
+        {"fy": 2024, "revenue": 106820, "operating_income": 59661, "label": "生产力与业务流程"},
+        {"fy": 2025, "revenue": 120810, "operating_income": 69773, "label": "生产力与业务流程"},
+        {"fy": 2026, "revenue": 139996, "operating_income": 83879, "label": "生产力与业务流程"}
+      ]
+    },
+    "cloud": {
+      "name": "服务器 / 智能云",
+      "parent_now": "intelligent_cloud",
+      "profit_grain": "2006–2013 为 Server and Tools（Windows Server、SQL、早期 Azure）。2016 年起为智能云。Azure 没有单独营业利润，FY2026 Azure 营收超过 1000 亿美元，利润含在智能云 570 亿里。",
+      "years": [
+        {"fy": 2006, "revenue": 9670, "operating_income": 2980, "label": "Server and Tools"},
+        {"fy": 2007, "revenue": 11184, "operating_income": 3593, "label": "Server and Tools"},
+        {"fy": 2008, "revenue": 13189, "operating_income": 4261, "label": "Server and Tools"},
+        {"fy": 2009, "revenue": 14276, "operating_income": 4638, "label": "Server and Tools"},
+        {"fy": 2010, "revenue": 15121, "operating_income": 5378, "label": "Server and Tools"},
+        {"fy": 2011, "revenue": 16571, "operating_income": 6132, "label": "Server and Tools"},
+        {"fy": 2012, "revenue": 18544, "operating_income": 7256, "label": "Server and Tools"},
+        {"fy": 2013, "revenue": 20295, "operating_income": 8152, "label": "Server and Tools"},
+        {"fy": 2016, "revenue": 24952, "operating_income": 9249, "label": "智能云"},
+        {"fy": 2017, "revenue": 27407, "operating_income": 9127, "label": "智能云"},
+        {"fy": 2018, "revenue": 32219, "operating_income": 11524, "label": "智能云"},
+        {"fy": 2019, "revenue": 38985, "operating_income": 13920, "label": "智能云"},
+        {"fy": 2020, "revenue": 48366, "operating_income": 18324, "label": "智能云"},
+        {"fy": 2021, "revenue": 60080, "operating_income": 26126, "label": "智能云"},
+        {"fy": 2022, "revenue": 75251, "operating_income": 32721, "label": "智能云"},
+        {"fy": 2023, "revenue": 87907, "operating_income": 37884, "label": "智能云"},
+        {"fy": 2024, "revenue": 87464, "operating_income": 37813, "label": "智能云"},
+        {"fy": 2025, "revenue": 106265, "operating_income": 44589, "label": "智能云"},
+        {"fy": 2026, "revenue": 137791, "operating_income": 56972, "label": "智能云"}
+      ]
+    },
+    "gaming": {
+      "name": "Xbox / 游戏",
+      "parent_now": "more_personal_computing",
+      "profit_grain": "2006–2013 为 Entertainment and Devices（主机、Zune、手机软件混在一起，不是纯 Xbox）。2016 年起游戏利润并进「更多个人计算」，只再披露 Xbox 营收。",
+      "years": [
+        {"fy": 2006, "revenue": 4761, "operating_income": -1329, "label": "Entertainment and Devices"},
+        {"fy": 2007, "revenue": 6066, "operating_income": -2016, "label": "Entertainment and Devices"},
+        {"fy": 2008, "revenue": 8139, "operating_income": 267, "label": "Entertainment and Devices"},
+        {"fy": 2009, "revenue": 8035, "operating_income": -3, "label": "Entertainment and Devices"},
+        {"fy": 2010, "revenue": 8114, "operating_income": 589, "label": "Entertainment and Devices"},
+        {"fy": 2011, "revenue": 8896, "operating_income": 1299, "label": "Entertainment and Devices"},
+        {"fy": 2012, "revenue": 9590, "operating_income": 381, "label": "Entertainment and Devices"},
+        {"fy": 2013, "revenue": 10213, "operating_income": 888, "label": "Entertainment and Devices"}
+      ]
+    },
+    "search": {
+      "name": "搜索 / 在线广告",
+      "parent_now": "more_personal_computing",
+      "profit_grain": "2006–2013 为 Online Services（Bing、MSN、广告）。多数年份是亏损。2012 年亏损含 aQuantive 减值。2016 年起并进「更多个人计算」，只再披露搜索广告营收。",
+      "years": [
+        {"fy": 2006, "revenue": 2303, "operating_income": 194, "label": "Online Services"},
+        {"fy": 2007, "revenue": 2441, "operating_income": -630, "label": "Online Services"},
+        {"fy": 2008, "revenue": 3214, "operating_income": -1309, "label": "Online Services"},
+        {"fy": 2009, "revenue": 2110, "operating_income": -1760, "label": "Online Services"},
+        {"fy": 2010, "revenue": 2345, "operating_income": -2395, "label": "Online Services"},
+        {"fy": 2011, "revenue": 2680, "operating_income": -2649, "label": "Online Services"},
+        {"fy": 2012, "revenue": 2935, "operating_income": -8117, "label": "Online Services"},
+        {"fy": 2013, "revenue": 3284, "operating_income": -1298, "label": "Online Services"}
+      ]
+    },
+    "devices": {
+      "name": "设备 / 手机 / Surface",
+      "parent_now": "more_personal_computing",
+      "profit_grain": "年报几乎没有 Surface 或手机的单独营业利润。诺基亚减记打进 FY2015 公司利润表。之后硬件利润并进「更多个人计算」。",
+      "years": []
+    },
+    "company": {
+      "name": "全公司",
+      "parent_now": null,
+      "profit_grain": "不是一条产品线。",
+      "years": []
+    }
+  },
+  "parents_now": {
+    "productivity": {
+      "name": "生产力与业务流程",
+      "fy2026_revenue": 139996,
+      "fy2026_operating_income": 83879
+    },
+    "intelligent_cloud": {
+      "name": "智能云",
+      "fy2026_revenue": 137791,
+      "fy2026_operating_income": 56972
+    },
+    "more_personal_computing": {
+      "name": "更多个人计算",
+      "fy2026_revenue": 54052,
+      "fy2026_operating_income": 14386,
+      "years": [
+        {"fy": 2016, "revenue": 40410, "operating_income": 6183},
+        {"fy": 2017, "revenue": 39294, "operating_income": 8815},
+        {"fy": 2018, "revenue": 42276, "operating_income": 10610},
+        {"fy": 2019, "revenue": 45698, "operating_income": 12820},
+        {"fy": 2020, "revenue": 48251, "operating_income": 15911},
+        {"fy": 2021, "revenue": 54093, "operating_income": 19439},
+        {"fy": 2022, "revenue": 59655, "operating_income": 20975},
+        {"fy": 2023, "revenue": 54734, "operating_income": 16450},
+        {"fy": 2024, "revenue": 50838, "operating_income": 11959},
+        {"fy": 2025, "revenue": 54649, "operating_income": 14166},
+        {"fy": 2026, "revenue": 54052, "operating_income": 14386}
+      ]
+    }
+  },
+  "product_revenue": {
+    "2024": [
+      {"id": "server_cloud", "name": "服务器与云服务（含 Azure）", "revenue": 79828, "line": "cloud", "oi": null},
+      {"id": "m365_comm", "name": "Microsoft 365 商业", "revenue": 76969, "line": "office", "oi": null},
+      {"id": "xbox", "name": "Xbox", "revenue": 21503, "line": "gaming", "oi": null},
+      {"id": "linkedin", "name": "LinkedIn", "revenue": 16372, "line": "office", "oi": null},
+      {"id": "windows_devices", "name": "Windows 与设备", "revenue": 17026, "line": "windows", "oi": null},
+      {"id": "search", "name": "搜索广告", "revenue": 12306, "line": "search", "oi": null},
+      {"id": "m365_cons", "name": "Microsoft 365 消费", "revenue": 6648, "line": "office", "oi": null},
+      {"id": "dynamics", "name": "Dynamics", "revenue": 6831, "line": "office", "oi": null}
+    ],
+    "2025": [
+      {"id": "server_cloud", "name": "服务器与云服务（含 Azure）", "revenue": 98435, "line": "cloud", "oi": null},
+      {"id": "m365_comm", "name": "Microsoft 365 商业", "revenue": 87767, "line": "office", "oi": null},
+      {"id": "xbox", "name": "Xbox", "revenue": 23455, "line": "gaming", "oi": null},
+      {"id": "linkedin", "name": "LinkedIn", "revenue": 17812, "line": "office", "oi": null},
+      {"id": "windows_devices", "name": "Windows 与设备", "revenue": 17314, "line": "windows", "oi": null},
+      {"id": "search", "name": "搜索广告", "revenue": 13878, "line": "search", "oi": null},
+      {"id": "m365_cons", "name": "Microsoft 365 消费", "revenue": 7404, "line": "office", "oi": null},
+      {"id": "dynamics", "name": "Dynamics", "revenue": 7827, "line": "office", "oi": null}
+    ],
+    "2026": [
+      {"id": "server_cloud", "name": "服务器与云服务（含 Azure）", "revenue": 129425, "line": "cloud", "oi": null},
+      {"id": "m365_comm", "name": "Microsoft 365 商业", "revenue": 101997, "line": "office", "oi": null},
+      {"id": "xbox", "name": "Xbox", "revenue": 21790, "line": "gaming", "oi": null},
+      {"id": "linkedin", "name": "LinkedIn", "revenue": 19817, "line": "office", "oi": null},
+      {"id": "windows_devices", "name": "Windows 与设备", "revenue": 17084, "line": "windows", "oi": null},
+      {"id": "search", "name": "搜索广告", "revenue": 15176, "line": "search", "oi": null},
+      {"id": "m365_cons", "name": "Microsoft 365 消费", "revenue": 9175, "line": "office", "oi": null},
+      {"id": "dynamics", "name": "Dynamics", "revenue": 9006, "line": "office", "oi": null}
+    ]
+  }
+}

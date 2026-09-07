@@ -15,6 +15,12 @@ def main() -> None:
     DOCS.mkdir(exist_ok=True)
     dest = DOCS / "msft.json"
     shutil.copyfile(MSFT, dest)
+    fy = ROOT / "data" / "issuers" / "MSFT" / "financials_fy.json"
+    if fy.exists():
+        shutil.copyfile(fy, DOCS / "financials_fy.json")
+    lines = ROOT / "data" / "issuers" / "MSFT" / "product_lines.json"
+    if lines.exists():
+        shutil.copyfile(lines, DOCS / "product_lines.json")
     payload = json.loads(MSFT.read_text(encoding="utf-8"))
     catalog = {
         "as_of": payload.get("as_of"),
