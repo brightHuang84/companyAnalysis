@@ -134,7 +134,11 @@ function financeBlock(fin) {
     lineStats.push(`<div class="stat"><b>${esc(pct(latest.op_margin_pct))}</b><span>该分部最新利润率</span></div>`);
   }
   (pl.revenue_only || []).forEach((item) => {
-    lineStats.push(`<div class="stat"><b>${esc(usdM(item.revenue_usd_m))}</b><span>${esc(item.name)} 营收（无利润）</span></div>`);
+    const label = item.nested ? `${item.name} 营收（含在上一行）` : `${item.name} 营收（无利润）`;
+    lineStats.push(`<div class="stat"><b>${esc(usdM(item.revenue_usd_m))}</b><span>${esc(label)}</span></div>`);
+  });
+  (pl.web || []).slice(0, 6).forEach((item) => {
+    lineStats.push(`<div class="stat"><b>${esc(item.display)}</b><span>${esc(item.name)} · ${esc(item.grain_label || "")}</span></div>`);
   });
   return `
     <h3>这条决策动了哪笔钱</h3>
@@ -199,7 +203,7 @@ function renderDetail(rows) {
     <h3>最终效果</h3>
     <p>${esc(row.effect_far)}</p>
     ${financeBlock(row.finance)}
-    <p class="note">新闻对照：${esc(row.news)} · 事实核验：${esc(row.verify)}</p>
+    <p class="note">新闻对照：${esc(row.news)} · 事实核验：${esc(row.verify)} · <a href="products.html">产品线：份额 / 订阅 / 单价</a></p>
   `;
 }
 

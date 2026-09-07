@@ -53,7 +53,7 @@ function runSearch() {
 }
 
 function renderCatalog() {
-  catalogEl.innerHTML = catalog.issuers.map((co) => `
+  const issuerCards = catalog.issuers.map((co) => `
     <a class="card" href="${esc(co.page)}">
       <p class="kicker">${esc(co.exchange)} · ${esc(co.ticker)}</p>
       <h3>${esc(co.name)}</h3>
@@ -61,6 +61,14 @@ function renderCatalog() {
       <p class="note">打开台账，按年代和判定翻阅。</p>
     </a>
   `).join("");
+  const extra = `
+    <a class="card" href="products.html">
+      <p class="kicker">MSFT · 产品线</p>
+      <h3>份额、订阅、单价</h3>
+      <p>按年列出席位增速、绝对席位、公开标价和第三方份额。</p>
+      <p class="note">年报给增速和营收；标价和市场份额另行标注来源。</p>
+    </a>`;
+  catalogEl.innerHTML = issuerCards + extra;
 }
 
 document.getElementById("search-form").addEventListener("submit", (e) => {

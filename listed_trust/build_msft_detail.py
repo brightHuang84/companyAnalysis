@@ -20,15 +20,15 @@ _msft_finance = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_msft_finance)
 attach_finance = _msft_finance.attach_finance
 
-ROOT = Path("/home/bright/cryto/data/issuers/MSFT")
+ROOT = ROOT_REPO / "data" / "issuers" / "MSFT"
 CANVAS = Path(
     "/home/bright/.cursor/projects/home-bright-cryto/canvases/microsoft-event-trust.canvas.tsx"
 )
 FINANCE_CANVAS = Path(
     "/home/bright/.cursor/projects/home-bright-cryto/canvases/microsoft-decision-returns.canvas.tsx"
 )
-REPORT = Path("/home/bright/cryto/reports/MSFT_event_decisions_1986_2026.md")
-LEDGER = Path("/home/bright/cryto/reports/MSFT_40year_ledger_2026-09-07.md")
+REPORT = ROOT_REPO / "reports" / "MSFT_event_decisions_1986_2026.md"
+LEDGER = ROOT_REPO / "reports" / "MSFT_40year_ledger_2026-09-07.md"
 
 GRADE_TONE = {
     "兑现": "success",
@@ -155,8 +155,8 @@ def merge() -> list[dict]:
         "method": (
             "每条物质事件四段：当时背景、决策原因、决策目录（备选/实选）、"
             "近端与最终效果。财务栏写这条事件自己的钱、它和当年全公司年报的关系，"
-            "以及这条产品线能核对到的分部营业利润。微软不披露 Windows / Azure / Xbox 单品利润；"
-            "更细的产品只有营收。"
+            "以及这条产品线能核对到的分部营业利润。微软不披露 Windows / Azure / Xbox 单品利润。"
+            "更细的产品 10-K 给营收；席位增速在年报 KPI 里；绝对席位、标价和市场份额按年表另列并标明来源。"
         ),
         "analysis_fields": [
             "background",
@@ -195,7 +195,7 @@ def write_markdown(merged: list[dict], grades: Counter) -> None:
         "",
         "决策原因里凡未写进新闻稿或监管原文的，在「原因核验」标明推断或未核实。效果判定：兑现 / 部分兑现 / 未兑现 / 被强制修正 / 未核实。",
         "",
-        "财务口径：微软不披露单品研发与单品利润。每条先写**这条事件自己的钱**，再写**它和当年全公司年报是什么关系**，再写**这条产品线带给公司多少利润**。能核对的最细一级是分部营业利润（2006–2013 五分部，2016 起三分部）。Windows / Azure / Xbox / Copilot 没有单独营业利润；更细的产品只有营收。",
+        "财务口径：微软不披露单品研发与单品营业利润。每条先写**这条事件自己的钱**，再写**它和当年全公司年报是什么关系**，再写**这条产品线带给公司多少利润**。能核对的最细一级是分部营业利润。更细产品 10-K 给营收；席位/订阅增速在年报 KPI；绝对席位、公开标价和市场份额按年列在产品线页，并标明来源。",
         "",
         (
             f"判定汇总：兑现 {grades['兑现']}，部分兑现 {grades['部分兑现']}，"
@@ -253,6 +253,8 @@ def write_markdown(merged: list[dict], grades: Counter) -> None:
 
 
 def write_canvas(merged: list[dict], grades: Counter) -> None:
+    if not CANVAS.parent.exists():
+        return
     events_js = json.dumps(merged, ensure_ascii=False, indent=2)
     chart = "[{ name: \"事件条数\", data: [%d, %d, %d, %d, %d] }]" % (
         grades["兑现"],
@@ -577,6 +579,8 @@ def _yi(usd_m: float | int) -> float:
 
 
 def write_finance_canvas(merged: list[dict]) -> None:
+    if not FINANCE_CANVAS.parent.exists():
+        return
     fy_payload = json.loads((ROOT / "financials_fy.json").read_text(encoding="utf-8"))
     lines_payload = json.loads((ROOT / "product_lines.json").read_text(encoding="utf-8"))
     years = fy_payload["years"]
@@ -674,19 +678,22 @@ def write_finance_canvas(merged: list[dict]) -> None:
         ensure_ascii=False,
     )
     fy26_rev = lines_payload["product_revenue"]["2026"]
+    parent_label = {
+        "cloud": "计入智能云",
+        "office": "计入生产力与业务流程",
+        "gaming": "计入更多个人计算",
+        "windows": "计入更多个人计算",
+        "search": "计入更多个人计算",
+        "devices": "计入更多个人计算",
+        "company": "公司其他",
+    }
     fy26_rev_rows = json.dumps(
         [
             [
                 item["name"],
                 _fmt_usd_m(item["revenue"]),
-                "年报不单列",
-                {
-                    "cloud": "计入智能云",
-                    "office": "计入生产力与业务流程",
-                    "gaming": "计入更多个人计算",
-                    "windows": "计入更多个人计算",
-                    "search": "计入更多个人计算",
-                }[item["line"]],
+                "含在上一行" if item.get("nested") else "年报不单列",
+                parent_label.get(item.get("line"), "—"),
             ]
             for item in fy26_rev
         ],
@@ -860,7 +867,7 @@ def patch_ledger(merged: list[dict]) -> None:
         "",
         "1. **这条事件自己的钱**：并购对价、减值、罚金。没有单独科目就写未单列，不把全公司研发当成这条产品的开发费。",
         "2. **和当年年报的关系**：营收、毛利率、营业利润率是微软整体数字，用来看当时买不买得起、罚得起。不是这条产品的利润表。",
-        "3. **这条产品线带给公司多少利润**：能核对的最细一级是分部营业利润。2006–2013 年有 Windows、Office、服务器、游戏/设备、搜索五条线；2016 年起只有生产力、智能云、更多个人计算三条。Azure、Xbox、Bing、PowerPoint 都没有单独营业利润；更细产品只有营收。2014–2015 年口径切过，相邻年不完全可比。",
+        "3. **这条产品线带给公司多少利润**：能核对的最细一级是分部营业利润。2006–2013 年有 Windows、Office、服务器、游戏/设备、搜索五条线；2016 年起只有生产力、智能云、更多个人计算三条。Azure、Xbox、Bing、PowerPoint 都没有单独营业利润。更细产品 10-K 给营收；席位增速在年报 KPI；绝对席位、公开标价和市场份额按年列在产品线页。2014–2015 年口径切过，相邻年不完全可比。",
         "4. **事后回收**：后来这笔资产有没有变成可核对的分部利润，或有没有减记。",
         "",
         (
@@ -899,8 +906,10 @@ def main() -> None:
     print("returns", dict(returns))
     print("json", (ROOT / "events_1986_2026.json").stat().st_size)
     print("md", REPORT.stat().st_size)
-    print("canvas", CANVAS.stat().st_size)
-    print("finance_canvas", FINANCE_CANVAS.stat().st_size)
+    if CANVAS.exists():
+        print("canvas", CANVAS.stat().st_size)
+    if FINANCE_CANVAS.exists():
+        print("finance_canvas", FINANCE_CANVAS.stat().st_size)
 
 
 if __name__ == "__main__":

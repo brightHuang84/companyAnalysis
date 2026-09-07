@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>微软产品线：份额、订阅、单价</title>
+  <meta name="description" content="把微软各产品线能找到的份额、席位/订阅和单价按年列出来。10-K 给营收和席位增速；绝对席位、标价和市场份额另行标注来源。" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="index.html">事件台账</a>
+    <a href="index.html">主页</a>
+    <a href="msft.html">微软事件</a>
+    <a href="products.html" class="on">产品线</a>
+  </nav>
+
+  <header class="top">
+    <p class="kicker">NASDAQ: MSFT · 产品线年鉴</p>
+    <h1>份额、订阅、单价按年列</h1>
+    <p class="lede">
+      年报能核对的营业利润仍停在分部。但 10-K 产品表有营收，KPI 有席位/订阅增速。
+      绝对席位多在业绩会报一次，美元标价在价目表，市场份额在 Statcounter / Synergy。
+      下面三张年表把找到的数字都列上，缺口标成「年报未给」。
+    </p>
+    <div class="stats" id="hero"></div>
+  </header>
+
+  <section class="filters" aria-label="产品线">
+    <div class="pills" id="lines"></div>
+  </section>
+
+  <main class="wrap products">
+    <p class="callout">
+      <b>怎么读来源。</b>
+      <span class="badge">10-K</span> 年报正文或 KPI。
+      <span class="badge">业绩会</span> 电话会 / 业绩稿口头数。
+      <span class="badge">标价</span> 公开价目表，不是成交价。
+      <span class="badge">第三方</span> Statcounter / Synergy / 媒体。
+      <span class="badge">倒推</span> 用增速或席位除营收算出来。
+    </p>
+
+    <h2 class="section-title">份额</h2>
+    <p class="hint" id="share-note"></p>
+    <div class="table-wrap"><table id="share-table"></table></div>
+
+    <h2 class="section-title">订阅 / 席位</h2>
+    <p class="hint" id="seat-note"></p>
+    <div class="table-wrap"><table id="seat-growth-table"></table></div>
+    <div class="table-wrap"><table id="seat-table"></table></div>
+    <div class="table-wrap"><table id="arpu-table"></table></div>
+
+    <h2 class="section-title">单价</h2>
+    <p class="hint" id="price-note"></p>
+    <div class="table-wrap"><table id="price-table"></table></div>
+
+    <h2 class="section-title">产品营收（10-K 产品表）</h2>
+    <p class="hint">单位：亿美元。Azure 全年美元从 FY2025 才单独给，含在「服务器与云」里，表中缩进行不另加总。</p>
+    <div class="chart" id="rev-chart"></div>
+    <div class="table-wrap"><table id="rev-table"></table></div>
+
+    <h2 class="section-title">分部营业利润（年报能核对的最细一级）</h2>
+    <p class="hint">2006–2013 五条线，2016 起三条。Windows / Azure / Xbox 没有单品利润。</p>
+    <div class="chart" id="oi-chart"></div>
+
+    <p class="note" id="foot"></p>
+  </main>
+
+  <footer>
+    <p><a href="msft.html">回事件台账</a> · 不是投资建议。标价不是企业成交价。</p>
+  </footer>
+  <script src="site.js"></script>
+  <script src="products.js"></script>
+</body>
+</html>

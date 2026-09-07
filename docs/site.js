@@ -49,6 +49,7 @@ function haystack(row) {
     row.finance && row.finance.outlay_text,
     row.finance && row.finance.product_line && row.finance.product_line.name,
     row.finance && row.finance.product_line && (row.finance.product_line.paragraphs || []).join("\n"),
+    row.finance && row.finance.product_line && (row.finance.product_line.web || []).map((w) => w.display).join("\n"),
   ].filter(Boolean).join("\n");
 }
 

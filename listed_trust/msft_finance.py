@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-ROOT = Path("/home/bright/cryto/data/issuers/MSFT")
+ROOT = Path(__file__).resolve().parents[1] / "data" / "issuers" / "MSFT"
 FY_PATH = ROOT / "financials_fy.json"
 LINES_PATH = ROOT / "product_lines.json"
 
@@ -1071,6 +1071,86 @@ def load_lines() -> dict:
     return json.loads(LINES_PATH.read_text(encoding="utf-8"))
 
 
+GRAIN_LABEL = {
+    "10k": "10-K",
+    "earnings": "业绩会",
+    "company": "公司口径",
+    "third_party": "第三方",
+    "derived": "倒推",
+    "estimate": "估算",
+    "list_price": "标价（价目表）",
+    "none": "年报不披露",
+}
+
+
+def _web_for_line(catalog: dict, line_id: str) -> list[dict]:
+    out: list[dict] = []
+    for m in (catalog.get("web_metrics") or {}).get("metrics") or []:
+        if m.get("line") != line_id:
+            continue
+        value, unit = m.get("value"), m.get("unit") or ""
+        display = f"{value} {unit}".strip()
+        out.append(
+            {
+                "id": m.get("id"),
+                "name": m["name"],
+                "display": f"{display}（{m.get('as_of') or ''}）",
+                "grain": m.get("grain"),
+                "grain_label": GRAIN_LABEL.get(m.get("grain"), m.get("grain") or ""),
+                "source": m.get("source") or "",
+                "note": m.get("note") or "",
+            }
+        )
+    operating = catalog.get("operating") or {}
+    latest_share = [s for s in operating.get("share") or [] if s.get("line") == line_id]
+    if latest_share:
+        s = latest_share[-1]
+        out.append(
+            {
+                "id": f"share-{line_id}",
+                "name": s["name"],
+                "display": f"{s['value']}{s.get('unit') or ''}（FY{s['fy']}）",
+                "grain": s.get("grain"),
+                "grain_label": GRAIN_LABEL.get(s.get("grain"), s.get("grain") or ""),
+                "source": s.get("source") or "",
+                "note": "份额年表在产品线页。年报没有市场份额表。",
+            }
+        )
+    latest_seat = [s for s in operating.get("seats") or [] if s.get("line") == line_id]
+    if latest_seat:
+        s = latest_seat[-1]
+        out.append(
+            {
+                "id": f"seats-{line_id}",
+                "name": s["name"],
+                "display": f"{s['value']} {s.get('unit') or ''}（{s.get('as_of') or 'FY' + str(s['fy'])}）",
+                "grain": s.get("grain"),
+                "grain_label": GRAIN_LABEL.get(s.get("grain"), s.get("grain") or ""),
+                "source": s.get("source") or "",
+                "note": "订阅/席位年表在产品线页。",
+            }
+        )
+    latest_price = [
+        p
+        for p in operating.get("prices") or []
+        if p.get("line") == line_id and p.get("price_usd_mo") is not None
+    ]
+    if latest_price:
+        p = latest_price[-1]
+        out.append(
+            {
+                "id": f"price-{line_id}",
+                "name": p["sku"],
+                "display": f"${p['price_usd_mo']}/用户/月（FY{p['fy']} 标价）",
+                "grain": p.get("grain"),
+                "grain_label": GRAIN_LABEL.get(p.get("grain"), p.get("grain") or ""),
+                "source": p.get("source") or "",
+                "note": "单价年表在产品线页。10-K 不列美元标价。",
+            }
+        )
+    return out
+
+
 def _stat_row(fy: int, label: str, revenue: float, oi: float) -> dict:
     return {
         "fy": int(fy),
@@ -1211,15 +1291,33 @@ def product_line_snapshot(line_id: str, fy: int, product: str, catalog: dict) ->
     for item in revenue_tables.get(fy_key, []):
         if item.get("line") != line_id:
             continue
-        revenue_only.append({"name": item["name"], "revenue_usd_m": item["revenue"]})
+        revenue_only.append(
+            {
+                "name": item["name"],
+                "revenue_usd_m": item["revenue"],
+                "nested": bool(item.get("nested")),
+            }
+        )
     if revenue_only:
         bits = "、".join(
-            f"{item['name']} {_money(item['revenue_usd_m'])}" for item in revenue_only
+            f"{item['name']} {_money(item['revenue_usd_m'])}"
+            + ("（含在上一行里，不另加总）" if item.get("nested") else "")
+            for item in revenue_only
         )
         year_label = fy_key if fy_key != "2026" else "2026"
         paragraphs.append(
-            f"更细的产品只有营收、没有利润。FY{year_label}：{bits}。"
+            f"更细的产品年报给营收、不给利润。FY{year_label}：{bits}。"
         )
+
+    web_rows = _web_for_line(catalog, line_id)
+    if web_rows:
+        paragraphs.append(
+            "年报利润表没有的规模，去业绩会、监测机构和媒体补，并标明是不是公司自己说的："
+        )
+        for item in web_rows[:6]:
+            paragraphs.append(
+                f"{item['name']}：{item['display']} · {item['grain_label']} · {item['source']}"
+            )
 
     return {
         "id": line_id,
@@ -1229,6 +1327,7 @@ def product_line_snapshot(line_id: str, fy: int, product: str, catalog: dict) ->
         "at_event": at_event,
         "latest": latest,
         "revenue_only": revenue_only,
+        "web": web_rows,
     }
 
 
@@ -1262,7 +1361,7 @@ def attach_finance(events: list[dict]) -> list[dict]:
             "return_tone": RETURN_TONE.get(overlay["return_grade"], "neutral"),
             "return_summary": overlay["return_summary"],
             "company": company,
-            "note": "全公司年报用来对照规模。产品利润只写年报真正单列的分部；单品利润没有就不编。",
+            "note": "全公司年报用来对照规模。产品利润只写年报真正单列的分部。单品利润没有就不编；份额、席位、订阅去网上补，并标明来源。",
         }
         row = dict(event)
         row["finance"] = finance
