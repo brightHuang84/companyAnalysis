@@ -7,9 +7,9 @@
       "slug": "msft",
       "exchange": "NASDAQ",
       "ipo": "1986-03-13",
-      "event_count": 91,
-      "json": "msft.json",
-      "page": "msft.html"
+      "report_count": 41,
+      "json": "board_reports.json",
+      "page": "company.html"
     }
   ]
 }

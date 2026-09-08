@@ -25,8 +25,9 @@ def main() -> None:
     if board.exists():
         shutil.copyfile(board, DOCS / "board_reports.json")
     payload = json.loads(MSFT.read_text(encoding="utf-8"))
+    board_payload = json.loads((DOCS / "board_reports.json").read_text(encoding="utf-8")) if (DOCS / "board_reports.json").exists() else {}
     catalog = {
-        "as_of": payload.get("as_of"),
+        "as_of": board_payload.get("as_of") or payload.get("as_of"),
         "issuers": [
             {
                 "ticker": payload.get("ticker", "MSFT"),
@@ -34,16 +35,16 @@ def main() -> None:
                 "slug": "msft",
                 "exchange": payload.get("exchange", "NASDAQ"),
                 "ipo": payload.get("ipo"),
-                "event_count": payload.get("event_count", len(payload.get("events", []))),
-                "json": "msft.json",
-                "page": "msft.html",
+                "report_count": board_payload.get("year_count", len(board_payload.get("years") or [])),
+                "json": "board_reports.json",
+                "page": "company.html",
             }
         ],
     }
     (DOCS / "catalog.json").write_text(
         json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
-    print(f"copied {catalog['issuers'][0]['event_count']} events -> {dest}")
+    print(f"copied {catalog['issuers'][0]['report_count']} annual reports -> {DOCS / 'board_reports.json'}")
 
 
 if __name__ == "__main__":

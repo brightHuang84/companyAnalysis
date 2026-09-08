@@ -3,59 +3,69 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>微软公司信息：董事会报告</title>
-  <meta name="description" content="按财年整理微软董事会报告：当时环境、项目进展、未来展望，以及董事会执行时间线。美股没有 A 股「董事会报告」科目，本页用股东信、年报 MD&A 和物质事件折成同等结构。" />
-  <link rel="stylesheet" href="styles.css" />
+  <title>微软年报译文</title>
+  <meta name="description" content="微软各财年年报译文。公司页按年列出链接和提炼；点开某一年读完整译文和图表。" />
+  <link rel="stylesheet" href="styles.css?v=20260908b" />
 </head>
 <body>
   <nav class="nav">
-    <a class="brand" href="index.html">事件台账</a>
+    <a class="brand" href="index.html">年报译文</a>
     <a href="index.html">主页</a>
-    <a href="msft.html">微软事件</a>
-    <a href="products.html">产品线</a>
-    <a href="company.html" class="on">公司信息</a>
+    <a href="company.html" class="on">微软年报</a>
   </nav>
 
-  <header class="top">
-    <p class="kicker">NASDAQ: MSFT · 公司信息</p>
-    <h1>董事会报告，一年一份</h1>
-    <p class="lede">
-      美国 10-K 没有 A 股那种「董事会报告」章节。这里按财年（截止 6 月 30 日）把股东信、年报 MD&A 和当年物质事件折成同一组标题：当时环境、项目进展、未来展望。
-      上面先是董事会自己怎么换人、怎么分红、怎么交班的执行时间线。
+  <header class="top" id="page-header">
+    <p class="kicker">NASDAQ: MSFT · 年报译文</p>
+    <h1 id="page-title">微软年报，一年一份</h1>
+    <p class="lede" id="page-lede">
+      下面按财年列出年报链接和几句原文提炼。点开某一年，读完整译文，并保留能核对的营收、利润和产品构成图表。
+      有官方中文用官方中文，否则译英文致股东信；图文年报未出时用 10-K 管理层讨论概述。
     </p>
     <div class="stats" id="hero"></div>
   </header>
 
-  <main class="wrap company">
+  <main class="wrap" id="index-view">
     <p class="callout">
       <b>怎么读来源。</b>
-      <span class="badge">股东信综述</span> 压缩公开致股东信，不是原文。
-      <span class="badge">年报+事件综合</span> 用 10-K MD&A 和台账拼出来，当年没有可核的股东信网页档。
-      <span class="badge">业绩稿+10-K</span> 财年刚结束，图文年报可能还没上线。
+      <span class="badge ok">年报股东信官方中文</span> 微软自己当年发布的中文信。
+      <span class="badge">年报股东信原文翻译</span> 英文致股东信逐段译出。
+      <span class="badge warn">10-K MD&A原文翻译</span> 还没有图文股东信时，用 10-K 管理层讨论概述。
+      <span class="badge">当年无可用电子原文</span> 扫描件无法核验，不编造。
     </p>
 
-    <h2 class="section-title">董事会执行时间线</h2>
-    <p class="hint">从上市起到现在，董事会实际拍板过的交班、董事长更迭和资本回报政策。不是每年都有人事，空年看下面的年度报告。</p>
-    <ol class="timeline" id="timeline"></ol>
+    <h2 class="section-title">营收走势</h2>
+    <p class="hint">单位：亿美元。点柱子打开该年全文。</p>
+    <div class="chart spark-wrap" id="rev-spark"></div>
 
-    <h2 class="section-title">按年报告</h2>
+    <h2 class="section-title">分部营业利润</h2>
+    <p class="hint">2016 年起三条分部。棕=生产力，绿=智能云，浅=更多个人计算。单位：亿美元。</p>
+    <div class="chart" id="oi-chart"></div>
+
+    <h2 class="section-title">按年年报</h2>
     <section class="filters" aria-label="年代">
       <div class="pills" id="decades"></div>
     </section>
+    <p class="count" id="count"></p>
+    <div class="year-grid" id="years"></div>
   </main>
 
-  <div class="layout">
-    <aside>
-      <p class="count" id="count"></p>
-      <ol class="list" id="list"></ol>
-    </aside>
-    <article class="detail" id="detail"></article>
-  </div>
+  <main class="wrap" id="report-view" hidden>
+    <p class="hint" id="report-nav"></p>
+    <div class="report-charts">
+      <h2 class="section-title">当年账本</h2>
+      <div class="fin" id="report-fin"></div>
+      <h2 class="section-title">营收走势</h2>
+      <p class="hint">单位：亿美元。当前财年加粗。</p>
+      <div class="chart spark-wrap" id="report-spark"></div>
+      <div id="report-mix"></div>
+    </div>
+    <article class="report" id="report"></article>
+  </main>
 
   <footer>
-    <p><a href="msft.html">回事件台账</a> · 股东信综述不是原文翻译。不是投资建议。</p>
+    <p><a href="index.html">回主页</a> · 官方中文保持原貌；其余为译文。不是投资建议。</p>
   </footer>
-  <script src="site.js"></script>
-  <script src="company.js"></script>
+  <script src="site.js?v=20260908"></script>
+  <script src="company.js?v=20260908"></script>
 </body>
 </html>

@@ -73,3 +73,58 @@ function searchEvents(events, q, issuer) {
     .filter((row) => haystack(row).toLowerCase().includes(query))
     .map((row) => ({ ...row, snippet: snippet(row, q.trim()) }));
 }
+
+function kindClass(kind) {
+  if (kind === "年报股东信官方中文") return "ok";
+  if (
+    kind === "10-K MD&A原文翻译" ||
+    kind === "当年无可用电子原文" ||
+    kind === "未找到原文"
+  ) {
+    return "warn";
+  }
+  return "";
+}
+
+function reportHaystack(y) {
+  return [
+    `FY${y.fy}`,
+    String(y.fy),
+    y.period,
+    y.ceo,
+    y.chair,
+    y.letter_author,
+    y.letter_role,
+    y.source_kind,
+    y.source,
+    y.greeting,
+    y.unavailable,
+    ...(y.paragraphs || []),
+    y.financials && y.financials.revenue_text,
+  ]
+    .filter(Boolean)
+    .join("\n");
+}
+
+function reportSnippet(y, q) {
+  const text = reportHaystack(y).replace(/\s+/g, " ");
+  if (!q) {
+    const paras = (y.paragraphs || []).filter((p) => p.length > 18);
+    return (paras[0] || y.unavailable || "").slice(0, 120);
+  }
+  const lower = text.toLowerCase();
+  const needle = q.toLowerCase();
+  const at = lower.indexOf(needle);
+  if (at < 0) return (y.paragraphs && y.paragraphs[0] || "").slice(0, 120);
+  const start = Math.max(0, at - 24);
+  const chunk = text.slice(start, at + q.length + 48);
+  return (start > 0 ? "…" : "") + chunk + "…";
+}
+
+function searchReports(years, q, issuer) {
+  const query = (q || "").trim().toLowerCase();
+  if (!query) return [];
+  return (years || [])
+    .filter((y) => reportHaystack(y).toLowerCase().includes(query))
+    .map((y) => ({ ...y, issuer, snippet: reportSnippet(y, q.trim()) }));
+}

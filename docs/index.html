@@ -3,33 +3,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>上市公司事件台账</title>
-  <meta name="description" content="从上市第一天起整理物质事件：当时背景、决策原因、决策目录、最终效果。可检索。" />
-  <link rel="stylesheet" href="styles.css" />
+  <title>上市公司年报译文</title>
+  <meta name="description" content="按公司检索年报译文。点进公司看每年链接和提炼，点开某一年读完整译文和图表。" />
+  <link rel="stylesheet" href="styles.css?v=20260908b" />
 </head>
 <body>
   <nav class="nav">
-    <a class="brand" href="index.html">事件台账</a>
+    <a class="brand" href="index.html">年报译文</a>
     <a href="index.html" class="on">主页</a>
-    <a href="msft.html">微软事件</a>
-    <a href="products.html">产品线</a>
-    <a href="company.html">公司信息</a>
   </nav>
 
   <header class="hero">
-    <p class="kicker">公开新闻与监管原文对照</p>
-    <h1>先看事件和承诺，再用财报核对</h1>
+    <p class="kicker">公开年报对照译文</p>
+    <h1>先搜公司，再按年读年报</h1>
     <p class="lede">
-      每一条写当时背景、为什么拍板、桌上有哪几条路、后来对没对上。
-      微软样本的财务栏写这条事件自己的钱、它和当年全公司年报的关系，以及这条产品线能核对到的分部营业利润。
-      份额、席位和单价按年列在<a href="products.html">产品线</a>页。各年董事会报告在<a href="company.html">公司信息</a>。
+      主页只负责检索。点进一家公司，先看每年年报的链接和几句提炼；点开某一年，读完整译文，并保留当年能核对的财务图表。
     </p>
     <form class="search-box" id="search-form" role="search">
-      <label class="sr" for="q">搜索事件</label>
-      <input type="search" id="q" name="q" placeholder="搜公司、产品、并购、监管、裁员… 例如 Azure、Activision、欧盟" autocomplete="off" />
+      <label class="sr" for="q">搜索年报</label>
+      <input type="search" id="q" name="q" placeholder="搜公司、产品、年份… 例如 Azure、Windows、人工智能、FY2024" autocomplete="off" />
       <button type="submit">搜索</button>
     </form>
-    <p class="hint" id="search-hint">当前可检索微软 1986–2026 共 91 条。</p>
+    <p class="hint" id="search-hint">正在读目录…</p>
   </header>
 
   <section class="wrap" id="results-wrap" hidden>
@@ -43,9 +38,9 @@
   </section>
 
   <footer>
-    <p>不是投资建议。承诺与效果默认未核实，除非核验栏写明多源一致。</p>
+    <p>不是投资建议。有官方中文用官方中文，否则译英文原文。找不到电子档的年份会标明。</p>
   </footer>
-  <script src="site.js"></script>
-  <script src="home.js"></script>
+  <script src="site.js?v=20260908"></script>
+  <script src="home.js?v=20260908"></script>
 </body>
 </html>
